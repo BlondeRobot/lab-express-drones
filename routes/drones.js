@@ -33,7 +33,7 @@ router.get('/drones/:id/edit', (req, res, next) => {
 
   Drone.findById(id)
     .then((droneToEdit) => {
-      res.render("/drones/update-form", { droneToEdit })
+      res.render("drones/update-form", { droneToEdit })
     })
     .catch((error) => next(error));
 });
